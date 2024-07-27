@@ -1,6 +1,9 @@
 CC=gcc
-#CFLAGS=-O2 -march=native -ftree-vectorize -fomit-frame-pointer -Wno-unused-result
-CFLAGS=-O2 -mcpu=750 -mtune=750 -fomit-frame-pointer -mpowerpc-gfxopt -Wno-unused-result
+#Intel:
+CFLAGS=-O2 -march=native -ftree-vectorize -fomit-frame-pointer -Wno-unused-result
+#PowerPC
+#CFLAGS=-O2 -mcpu=750 -mtune=750 -fomit-frame-pointer -mpowerpc-gfxopt -Wno-unused-result
+#Debug
 #CFLAGS=-g -mavx2 -mfma -fsanitize=address
 
 MATH=-lm
