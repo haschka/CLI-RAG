@@ -10,7 +10,9 @@ sudo apt-get install build-essential libjson-c-dev libcurl-dev libreadline-dev
 ```
 Further you need a llama.cpp compatible large language and embedding model.
 For the following instructins we suggest: 
+
 https://huggingface.co/lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF
+
 https://huggingface.co/nomic-ai/nomic-embed-text-v1.5-GGUF
 
 3. Build:
