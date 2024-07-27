@@ -29,6 +29,8 @@ llama.cpp/bin/server -m Meta-Llama-3.1-8B-Instruct-Q6_K.gguf --host localhost
 ```
 bin/rag-conversation localhost 8080 -1
 ```
+When you type your text finish with `Ctrl-d`. This allows multiline input
+on the terminal. 
 
 4. Run with RAG:
 4.1 Start a llama.cpp server to generate embeddings:
