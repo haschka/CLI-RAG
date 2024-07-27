@@ -1,6 +1,6 @@
-# Command line client for llama.cpp
+## Command line client for llama.cpp
 
-# Install instructions:
+### Install instructions:
 1. Requirements:
 The tool requires the libraries and headers (-dev packages)
 of curl, json-c and gnu readline. On debian based systems, i.e.
