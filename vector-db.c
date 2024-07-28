@@ -11,7 +11,6 @@
 #endif
 
 #include"vector-db.h"
-#include"binary_array.h"
 
 typedef struct {
   double distance;
@@ -270,19 +269,6 @@ double cosine_distance(char* a_in, char* b_in, size_t length) {
 }
 
 #endif
-
-void print_binary_embeddings(char* a, size_t vector_length) {
-
-  size_t i;
-  int v;
-  printf("Binary embedding result: ");
-  for(i=0;i<vector_length;i++) {
-    v = get_value_in_binary_array_at_index(a,i);
-    printf("%i",v);
-  }
-  printf("\n");
-  
-}
    
 
   
