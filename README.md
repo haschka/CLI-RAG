@@ -1,5 +1,8 @@
 ## Command line client for llama.cpp
 
+### Video tutorial:
+https://www.youtube.com/watch?v=rsBnAF5ZLK8
+
 ### Usage instructions:
 1. Requirements:
 The tool requires the libraries and headers (-dev packages)
