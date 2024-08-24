@@ -67,7 +67,7 @@ embedding generate_embedding_from_server_data(char* server_response) {
     _exit(1);
   }
 
-  json_object_array_length(embedding_array_j);
+  embedding_length = json_object_array_length(embedding_array_j);
 
   vector_write_size = sizeof(double)*embedding_length;
   
