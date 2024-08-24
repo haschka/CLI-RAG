@@ -38,7 +38,7 @@ on the terminal.
 4. Run with RAG:
 4.1 Start a llama.cpp server to generate embeddings:
 ```
-llama.cpp/bin/server -m nomic-embed-text-v1.5.f16.gguf --host localhost --port 8081
+llama.cpp/bin/llama-server -m nomic-embed-text-v1.5.f16.gguf --host localhost --port 8081
 ```
 4.2 Create a vector database from a text document:
 ```
