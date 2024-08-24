@@ -26,11 +26,11 @@ satisfy your systems libraries cflags.
 3. Conversation Run:
 3.1 Start a llama.cpp server:
 ```
-llama.cpp/bin/server -m Meta-Llama-3.1-8B-Instruct-Q6_K.gguf --host localhost
+llama.cpp/bin/llama-server -m Meta-Llama-3.1-8B-Instruct-Q6_K.gguf --host 127.0.0.1
 ```
 3.2 Connect to your llama.cpp server with the client:
 ```
-bin/rag-conversation localhost 8080 -1
+bin/rag-conversation 127.0.0.1 8080 -1
 ```
 When you type your text finish with `Ctrl-d`. This allows multiline input
 on the terminal. 
