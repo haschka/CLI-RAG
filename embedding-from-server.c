@@ -42,9 +42,14 @@ embedding generate_embedding_from_server_data(char* server_response) {
   size_t i;
 
   struct json_object* response_j = json_tokener_parse(server_response);
+
   struct json_object* embedding_array_j;
   struct json_object* embedding_vector_item;
 
+  struct json_object* response_j_inner;
+  struct json_object* embedding_array_j_outher;
+
+  
   embedding e;
 
   int embedding_length;
@@ -58,7 +63,12 @@ embedding generate_embedding_from_server_data(char* server_response) {
     _exit(1);
   }
 
-  json_object_object_get_ex(response_j, "embedding", &embedding_array_j);
+  response_j_inner = json_object_array_get_idx(response_j,0);
+  
+  json_object_object_get_ex(response_j_inner, "embedding",
+			    &embedding_array_j_outher);
+
+  embedding_array_j = json_object_array_get_idx(embedding_array_j_outher,0);
 
   if( embedding_array_j == NULL ) {
     fprintf(stderr,
