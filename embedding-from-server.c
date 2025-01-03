@@ -64,6 +64,14 @@ embedding generate_embedding_from_server_data(char* server_response) {
   }
 
   response_j_inner = json_object_array_get_idx(response_j,0);
+
+  if(response_j == NULL) {
+    fprintf(stderr,
+	    "Full JSON response from EMBEDDING "
+	    "is not an array, and first item could not be extracted\n"
+	    "The servers repsonse is given below \n%s\n", server_response);
+    _exit(1);
+  }
   
   json_object_object_get_ex(response_j_inner, "embedding",
 			    &embedding_array_j_outher);
